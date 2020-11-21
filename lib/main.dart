@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'screen.dart';
 import 'used_default_tabbar.dart';
+import 'tap_container_bottom.dart';
+import 'tab_container_index_stack.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,14 +25,26 @@ class MyApp extends StatelessWidget {
     Tab(icon: Icon(Icons.person))
   ];
 
+  // final tabs = <BottomNavigationBarItem>[
+  //   BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+  //   BottomNavigationBarItem(
+  //       icon: Icon(Icons.category_outlined), label: 'category'),
+  //   BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
+  //   BottomNavigationBarItem(
+  //       icon: Icon(Icons.shopping_cart_outlined), label: 'cart'),
+  //   BottomNavigationBarItem(icon: Icon(Icons.person), label: 'profile')
+  // ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark(
-        // visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+          // visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
       home: UsedDefaultTabBar(tabs: tabs, views: views),
+      // home: TapContainerBottom(tabs: tabs, views: views),
+      // home: TapContainerBottomStack(tabs: tabs, views: views),
     );
   }
 }
