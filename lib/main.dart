@@ -13,12 +13,20 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final views =  <Widget>[
-    Screen('Home'),
-    Screen('Categories'),
-    Screen('Search'),
-    Screen('Cart'),
-    Screen('Profile')
+    Screen(name: 'Home'),
+    Screen(name: 'Categories'),
+    Screen(name: 'Search'),
+    Screen(name: 'Cart'),
+    Screen(name: 'Profile')
   ];
+
+  // final views =  <Widget>[
+  //   Screen(name: 'Home', key: UniqueKey()),
+  //   Screen(name: 'Categories', key: UniqueKey()),
+  //   Screen(name: 'Search', key: UniqueKey()),
+  //   Screen(name: 'Cart', key: UniqueKey()),
+  //   Screen(name: 'Profile', key: UniqueKey())
+  // ];
 
   final tabs =  <Tab>[
     Tab(icon: Icon(Icons.home)),
