@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Screen extends StatelessWidget {
   final String name;
 
-  Screen(this.name);
+  const Screen(this.name);
 
   @override
   Widget build(BuildContext context) {

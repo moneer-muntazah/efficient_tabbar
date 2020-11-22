@@ -13,22 +13,24 @@ class TapContainerBottomStack extends StatefulWidget {
 
 class _TapContainerBottomStackState extends State<TapContainerBottomStack> {
   int tabIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("UsedDefaultTabBar"),
-        ),
-        body: IndexedStack(index: tabIndex, children: widget.views),
-        bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.grey[400],
-          backgroundColor: Colors.deepOrange,
-          currentIndex: tabIndex,
-          onTap: (i) => setState(() {
-            tabIndex = i;
-          }),
-          items: widget.tabs,
-        ));
+      appBar: AppBar(
+        title: Text("UsedDefaultTabBar"),
+      ),
+      body: IndexedStack(index: tabIndex, children: widget.views),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.grey[400],
+        backgroundColor: Colors.deepOrange,
+        currentIndex: tabIndex,
+        onTap: (i) => setState(() {
+          tabIndex = i;
+        }),
+        items: widget.tabs,
+      ),
+    );
   }
 }

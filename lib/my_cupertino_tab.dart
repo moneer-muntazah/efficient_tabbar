@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-class TapContainerBottom extends StatefulWidget {
+class MyCupertinoTab extends StatefulWidget {
   final List<BottomNavigationBarItem> tabs;
   final List<Widget> views;
 
-  TapContainerBottom({this.tabs, this.views});
+  MyCupertinoTab({this.tabs, this.views});
 
   @override
-  _TapContainerBottomState createState() => _TapContainerBottomState();
+  _MyCupertinoTabState createState() => _MyCupertinoTabState();
 }
 
-class _TapContainerBottomState extends State<TapContainerBottom> {
+class _MyCupertinoTabState extends State<MyCupertinoTab> {
   int tabIndex = 0;
 
   @override
@@ -20,9 +21,9 @@ class _TapContainerBottomState extends State<TapContainerBottom> {
         title: Text("UsedDefaultTabBar"),
       ),
       body: widget.views[tabIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey[400],
+      bottomNavigationBar: CupertinoTabBar(
+        // selectedItemColor: Colors.white,
+        // unselectedItemColor: Colors.grey[400],
         backgroundColor: Colors.deepOrange,
         currentIndex: tabIndex,
         onTap: (i) => setState(() {
