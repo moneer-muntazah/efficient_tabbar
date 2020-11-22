@@ -18,7 +18,7 @@ class _MyCupertinoTabState extends State<MyCupertinoTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("UsedDefaultTabBar"),
+        title: Text("MyCupertinoTab"),
       ),
       body: widget.views[tabIndex],
       bottomNavigationBar: CupertinoTabBar(

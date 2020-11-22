@@ -18,7 +18,7 @@ class _TapContainerBottomStackState extends State<TapContainerBottomStack> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("UsedDefaultTabBar"),
+        title: Text("TapContainerBottomStack"),
       ),
       body: IndexedStack(index: tabIndex, children: widget.views),
       bottomNavigationBar: BottomNavigationBar(

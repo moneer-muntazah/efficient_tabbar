@@ -18,7 +18,7 @@ class _GoogleNavBarState extends State<GoogleNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("UsedDefaultTabBar"),
+          title: Text("GoogleNavBar"),
         ),
         body: widget.views[tabIndex],
         bottomNavigationBar: GNav(

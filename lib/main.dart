@@ -6,6 +6,7 @@ import 'tap_container_bottom.dart';
 import 'tab_container_index_stack.dart';
 import 'google_nav.dart';
 import 'my_cupertino_tab.dart';
+import 'custom_tab_controller.dart';
 
 void main() {
   runApp(MyApp());
@@ -61,11 +62,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(
           // visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-      home: UsedDefaultTabBar(tabs: tabs, views: views),
+      // home: UsedDefaultTabBar(tabs: tabs, views: views),
       // home: TapContainerBottom(tabs: tabs, views: views),
       // home: TapContainerBottomStack(tabs: tabs, views: views),
       // home: GoogleNavBar(tabs: tabs, views: views),
       // home: MyCupertinoTab(tabs: tabs, views: views),
+      home: CustomTabController(tabs: tabs, views: views),
     );
   }
 }
