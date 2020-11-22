@@ -7,13 +7,14 @@ import 'tab_container_index_stack.dart';
 import 'google_nav.dart';
 import 'my_cupertino_tab.dart';
 import 'custom_tab_controller.dart';
+import 'custom_tab_container.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final views =  <Widget>[
+  final views = <Widget>[
     Screen(name: 'Home'),
     Screen(name: 'Categories'),
     Screen(name: 'Search'),
@@ -29,12 +30,20 @@ class MyApp extends StatelessWidget {
   //   Screen(name: 'Profile', key: UniqueKey())
   // ];
 
-  final tabs =  <Tab>[
-    Tab(icon: Icon(Icons.home)),
-    Tab(icon: Icon(Icons.category_outlined)),
-    Tab(icon: Icon(Icons.search)),
-    Tab(icon: Icon(Icons.shopping_cart_outlined)),
-    Tab(icon: Icon(Icons.person))
+  // final tabs =  <Tab>[
+  //   Tab(icon: Icon(Icons.home)),
+  //   Tab(icon: Icon(Icons.category_outlined)),
+  //   Tab(icon: Icon(Icons.search)),
+  //   Tab(icon: Icon(Icons.shopping_cart_outlined)),
+  //   Tab(icon: Icon(Icons.person))
+  // ];
+
+  final icons = <Icon>[
+    Icon(Icons.home),
+    Icon(Icons.category_outlined),
+    Icon(Icons.search),
+    Icon(Icons.shopping_cart_outlined),
+    Icon(Icons.person)
   ];
 
   // final tabs = <BottomNavigationBarItem>[
@@ -67,7 +76,7 @@ class MyApp extends StatelessWidget {
       // home: TapContainerBottomStack(tabs: tabs, views: views),
       // home: GoogleNavBar(tabs: tabs, views: views),
       // home: MyCupertinoTab(tabs: tabs, views: views),
-      home: CustomTabController(tabs: tabs, views: views),
+      home: CustomTabContainer(icons: icons, views: views),
     );
   }
 }
